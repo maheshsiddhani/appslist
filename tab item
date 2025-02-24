@@ -1,0 +1,19 @@
+// Write your code here
+import './index.css'
+
+const TabItem = props => {
+  const {displayText, onChangeCategory, tabId} = props
+  const changeCategory = () => {
+    onChangeCategory(tabId)
+  }
+
+  return (
+    <li className="list-item">
+      <button type="button" onClick={changeCategory} className="btn">
+        {displayText}
+      </button>
+    </li>
+  )
+}
+
+export default TabItem
